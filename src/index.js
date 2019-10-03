@@ -1,6 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './index.css'
-import App from './App'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas } from '@fortawesome/free-solid-svg-icons'
+import { fab } from '@fortawesome/free-brands-svg-icons'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+import Routes from './routes'
+
+library.add(fas, fab)
+
+ReactDOM.render(
+	<Routes />,
+	document.getElementById('root')
+)

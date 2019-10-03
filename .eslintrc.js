@@ -17,13 +17,20 @@ module.exports = {
 	},
 	plugins: ['react', 'prettier'],
 	rules: {
-		'space-before-function-paren': ['error', 'never'],
+		'space-before-function-paren': [
+			'error',
+			{
+				anonymous: 'never',
+				named: 'never',
+				asyncArrow: 'always'
+			}
+		],
 		indent: ['error', 'tab'],
 		'no-tabs': 'off',
 		'react/jsx-indent': ['error', 'tab'],
-    'react/jsx-indent-props': ['error', 'tab'],
-    'react/jsx-uses-react': 'error',
-    'react/jsx-uses-vars': 'error',
+		'react/jsx-indent-props': ['error', 'tab'],
+		'react/jsx-uses-react': 'error',
+		'react/jsx-uses-vars': 'error',
 		quotes: ['error', 'single']
 	}
 }
