@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     width: 90%;
-    min-height: 80%;
+    min-height: 75%;
     background-color: #fff;
     margin: auto;
     border: 1px solid #00000030;
@@ -17,7 +17,7 @@ export const Container = styled.div`
     }
 
     .body {
-        margin: 20px;
+        margin: 30px;
         width: 100%;
         p {
             margin: auto;
