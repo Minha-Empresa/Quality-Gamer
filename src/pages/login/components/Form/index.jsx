@@ -45,6 +45,7 @@ export default function Form() {
 	)
 
 	function login() {
+		// TODO: pedir autenticação a api
 		history.push('/game')
 	}
 }

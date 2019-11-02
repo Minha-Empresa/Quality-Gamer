@@ -9,10 +9,12 @@ export default function AppRouter() {
 		<Router>
 			<Route
 				path='/game'
-				exact component={Home}
+				exact
+				component={Home}
 			/>
 			<Route
 				path='/'
+				exact
 				component={Login}
 			/>
 		</Router>

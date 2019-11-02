@@ -36,9 +36,7 @@ export const Tab = styled.button`
         font-weight: 500;
         letter-spacing: 0.15em;
         margin: auto;
-        padding: 15px 20px;
-        display: inline-block;
-        padding: 8px;
+        padding: 5px 0px;
         position: relative;
     }
 

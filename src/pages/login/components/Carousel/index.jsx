@@ -14,15 +14,15 @@ export default function TutorialCarousel() {
 				showStatus={false}
 			>
 				<div>
-					<img src="assets/back_form.jpg" />
+					<img src="assets/back_form.jpg" alt="tutorial"/>
 					<p className="legend">Legend 1</p>
 				</div>
 				<div>
-					<img src="assets/back_form.jpg" />
+					<img src="assets/back_form.jpg" alt="tutorial"/>
 					<p className="legend">Legend 2</p>
 				</div>
 				<div>
-					<img src="assets/back_form.jpg" />
+					<img src="assets/back_form.jpg" alt="tutorial"/>
 					<p className="legend">Legend 3</p>
 				</div>
 			</Carousel>
