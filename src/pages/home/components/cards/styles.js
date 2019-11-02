@@ -34,12 +34,19 @@ export const Container = styled.div`
         button {
             flex: 1;
             border: 1px solid #00000010;
-            padding: 20px;
+			padding: 20px;
+			transition: all 0.5s;
+			color: #555;
             p {
                 font-size: 22px;
                 font-weight: 400;
                 margin: 0px auto;
-            }
+			}
+			
+			&:hover {
+				background-color: #eee;
+				color: #333;
+			}
         }
     }
 `

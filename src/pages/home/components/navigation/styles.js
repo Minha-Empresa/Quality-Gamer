@@ -12,3 +12,17 @@ export const Container = styled.div`
         color: #555;
     }
 `
+
+export const BarBorder = styled.div`
+	width: 10px;
+	height: 50px;
+	margin-left: 15px;
+`
+
+export const BarFill = styled.div`
+	background-color: ${props => props.color};
+	height: ${props => props.percentage}%;
+	width: 100%;
+	transition: all 0.5s;
+	margin-top: auto;
+`

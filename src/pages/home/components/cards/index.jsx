@@ -2,21 +2,27 @@ import React from 'react'
 
 import { Container } from './styles'
 
-export default function Cards() {
+export default function Cards(props) {
 	return (
 		<Container>
 			<div className='image'></div>
 			<div className='body'>
-				<p>Seu estagiário Marcos derramou seu café em você</p>
+				<p>{props.details}</p>
 			</div>
 			<div className='buttons'>
-				<button>
-					<p>Xingar e mandar embora</p>
-				</button>
-				<button>
-					<p>Tudo bem</p>
-				</button>
+				{props.choices.map((choice) => {
+					return <button onClick={() => {
+						animateOut()
+						props.sideEffect(choice.sideEffect)
+					}}>
+						<p>{choice.text}</p>
+					</button>
+				})}
 			</div>
 		</Container>
 	)
+
+	function animateOut() {
+
+	}
 }
