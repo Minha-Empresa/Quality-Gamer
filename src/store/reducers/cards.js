@@ -1,23 +1,29 @@
 import { createActions, createReducer } from 'reduxsauce'
 
-import { getCards } from '../../services/api'
-
 const defaultState = []
 
 // load initial state from local storage
 const INITIAL_STATE = defaultState
 
 // reducer handlers
-const loadCards = async (state = INITIAL_STATE, action) => {
+const loadCards = (state = INITIAL_STATE, action) => {
 	return action.cards
+}
+
+const deleteCards = (state = INITIAL_STATE, action) => {
+	let cards = state.cards
+	cards = cards.filter(card => card.details !== action.card.details)
+	return cards
 }
 
 // action types & creators
 export const { Types, Creators } = createActions({
-	loadCards: null
+	loadCards: ['cards'],
+	deleteCards: ['cards']
 })
 
 // reducer
 export default createReducer(INITIAL_STATE, {
-	[Types.LOAD_CARDS]: loadCards
+	[Types.LOAD_CARDS]: loadCards,
+	[Types.DELETE_CARDS]: deleteCards
 })

@@ -10,7 +10,7 @@ const api = axios.create({
 
 export async function getCards() {
 	const response = await api.get('cards/')
-	return response.data.map(card => ({
+	const list = response.data.map(card => ({
 		title: card.card_title,
 		details: card.card_description,
 		choices: [{
@@ -33,6 +33,7 @@ export async function getCards() {
 		}
 		]
 	}))
+	return list.reverse()
 }
 
 export async function login(username, password = '') {
