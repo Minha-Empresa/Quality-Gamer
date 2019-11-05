@@ -13,7 +13,7 @@ export default function Store() {
 					active={activeTab === 0}
 					onClick={() => setActiveTab(0)}
 				>
-					<p>funcionários</p>
+					<p>pessoas</p>
 				</Tab>
 				<Tab
 					active={activeTab === 1}
@@ -24,12 +24,6 @@ export default function Store() {
 				<Tab
 					active={activeTab === 2}
 					onClick={() => setActiveTab(2)}
-				>
-					<p>infraestrutura</p>
-				</Tab>
-				<Tab
-					active={activeTab === 3}
-					onClick={() => setActiveTab(3)}
 				>
 					<p>cargos</p>
 				</Tab>
