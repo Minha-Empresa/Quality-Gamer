@@ -4,6 +4,7 @@ import { Container } from './styles'
 import NavBar from './components/navigation'
 import Cards from './components/cards'
 import Store from './components/store'
+import { getCards } from '../../services/api'
 
 export default function Home() {
 	const [cash, setCash] = useState(50)

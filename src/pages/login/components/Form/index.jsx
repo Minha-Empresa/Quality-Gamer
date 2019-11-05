@@ -9,6 +9,7 @@ import {
 	FormBox,
 	TextBox
 } from './styles'
+import { login } from '../../../../services/api'
 
 export default function Form() {
 	const [username, setUsername] = useState('')
@@ -39,13 +40,18 @@ export default function Form() {
 						setPassword(event.value)
 					}}
 				/>
-				<LoginButton type="reset" onClick={login}>Continue</LoginButton>
+				<LoginButton type="reset" onClick={handleLogin}>Continue</LoginButton>
 			</FormBox>
 		</Container>
 	)
 
-	function login() {
-		// TODO: pedir autenticação a api
-		history.push('/game')
+	async function handleLogin() {
+		try {
+			await login(username, password)
+			history.push('/game')
+		} catch (err) {
+			// TODO: handle login error
+			console.log(err)
+		}
 	}
 }
