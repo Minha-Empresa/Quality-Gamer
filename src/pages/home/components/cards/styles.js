@@ -21,7 +21,7 @@ export const Container = styled.div`
     .image {
         background-color: #ccc;
         width: 100%;
-        height: 400px;
+        height: 50vh;
     }
 
     .body {
