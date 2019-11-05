@@ -31,7 +31,7 @@ export const Tab = styled.button`
         color: #333;
         font-family: 'Open Sans' roboto, sans-serif;
         text-transform: uppercase;
-        font-size: 12px;
+        font-size: 10px;
         text-decoration: none;
         font-weight: 500;
         letter-spacing: 0.15em;
