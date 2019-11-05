@@ -31,6 +31,7 @@ module.exports = {
 		'react/jsx-indent-props': ['error', 'tab'],
 		'react/jsx-uses-react': 'error',
 		'react/jsx-uses-vars': 'error',
-		quotes: ['error', 'single']
+		quotes: ['error', 'single'],
+		'no-unused-vars': 'off'
 	}
 }

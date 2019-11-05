@@ -6,6 +6,7 @@ export const Container = styled.div`
     box-shadow: 0px 4px 6px #00000010;
     justify-content: space-evenly;
     padding: 10px 0px;
+	margin-bottom: 80px;
 
     .icon {
 		font-size: 50px;

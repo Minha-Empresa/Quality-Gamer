@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Container } from './styles'
 
 export default function Cards(props) {
-	const cards = props.cards.map(card => ({ ...card, animatingOut: null })).reverse()
+	const [cards, setCards] = useState(props.cards.map(card => ({ ...card, animatingOut: false })).reverse())
 	const sideEffect = props.sideEffect
 
 	return (
@@ -13,7 +13,7 @@ export default function Cards(props) {
 				key={index}
 				animatingOut={card.animatingOut}
 			>
-				<div className='image'></div>
+				<img className="image" src="assets/dev.jpg" alt="imagem" />
 				<div className='body'>
 					<p>{card.details}</p>
 				</div>
@@ -21,12 +21,10 @@ export default function Cards(props) {
 					{card.choices.map((choice, buttonIndex) => {
 						return <button key={buttonIndex} onClick={() => {
 							if (card.animatingOut) return
-							console.log('animando' + buttonIndex)
-							card.animatingOut = buttonIndex
+							card.animatingOut = true
 							sideEffect(choice.sideEffect)
 							setTimeout(() => {
-								cards.pop()
-								console.log('fim')
+								setCards(cards.filter((item) => item !== card))
 							}, 1000)
 						}}>
 							<p>{choice.text}</p>

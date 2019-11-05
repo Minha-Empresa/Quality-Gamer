@@ -4,7 +4,7 @@ export const Container = styled.div`
     width: 80%;
     min-height: 75%;
     background-color: #fff;
-    margin: auto;
+	margin: 0px auto;
     border: 1px solid #00000030;
     border-radius: 40px;
     overflow: hidden;
@@ -12,8 +12,7 @@ export const Container = styled.div`
 	z-index: ${props => props.zIndex};
 
 	transform: translate(${props => {
-		if (props.animatingOut === 0) return '-500px'
-		if (props.animatingOut === 1) return '500px'
+		if (props.animatingOut) return '-5000px'
 		return '0px'
 	}}, ${props => props.zIndex * -100}%);
 

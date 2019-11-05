@@ -32,12 +32,41 @@ export default function Home() {
 				}
 			}
 		]
-	}]
+	},
+	{
+		details: '2',
+		choices: [
+			{
+				text: 'xingar e mandar embora',
+				sideEffect: {
+					cash: -5,
+					employees: -5,
+					code: 5,
+					clients: 0
+				}
+			},
+			{
+				text: 'tudo bem',
+				sideEffect: {
+					cash: 0,
+					employees: 5,
+					code: -5,
+					clients: 0
+				}
+			}
+		]
+	}
+	]
 
 	return (
 		<Container>
 			<div className="left">
-				<NavBar code={code} cash={cash} employees={employees} clients={clients} />
+				<NavBar
+					code={code}
+					cash={cash}
+					employees={employees}
+					clients={clients}
+				/>
 				<Cards
 					cards={cardList}
 					sideEffect={sideEffect}
