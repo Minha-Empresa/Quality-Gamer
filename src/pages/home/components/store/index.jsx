@@ -36,31 +36,31 @@ export default function Store() {
 			<ItemContainer>
 				{ activeTab === 0 && <>
 
-					<Item icon='user-friends'/>
+					<Item icon='user-friends' price={100} />
 
-					<Item icon='user-ninja'/>
+					<Item icon='user-ninja' price={100}/>
 
-					<Item icon='user-minus'/>
+					<Item icon='user-minus' price={100}/>
 
 				</>}
 
 				{ activeTab === 1 && <>
 
-					<Item icon='server'/>
+					<Item icon='server' price={100}/>
 
-					<Item icon='keyboard'/>
+					<Item icon='keyboard' price={100}/>
 
-					<Item icon='mouse'/>
+					<Item icon='mouse' price={100}/>
 
-					<Item icon='hdd'/>
+					<Item icon='hdd' price={100}/>
 
-					<Item icon='headphones'/>
+					<Item icon='headphones' price={100}/>
 
 				</>}
 
 				{ activeTab === 2 &&
 
-					<Item icon='user-tie'/>
+					<Item icon='user-tie' price={100}/>
 
 				}
 			</ItemContainer>
