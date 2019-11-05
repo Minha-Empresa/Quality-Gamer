@@ -1,6 +1,10 @@
 import React, { useState } from 'react'
 
-import { Container, Tab } from './styles'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+import { Container, Tab, ItemContainer } from './styles'
+
+import Item from './item'
 
 export default function Store() {
 	const [activeTab, setActiveTab] = useState(0)
@@ -28,7 +32,38 @@ export default function Store() {
 					<p>cargos</p>
 				</Tab>
 			</span>
-			{/* TODO: conteúdo da loja */}
+
+			<ItemContainer>
+				{ activeTab === 0 && <>
+
+					<Item icon='user-friends'/>
+
+					<Item icon='user-ninja'/>
+
+					<Item icon='user-minus'/>
+
+				</>}
+
+				{ activeTab === 1 && <>
+
+					<Item icon='server'/>
+
+					<Item icon='keyboard'/>
+
+					<Item icon='mouse'/>
+
+					<Item icon='hdd'/>
+
+					<Item icon='headphones'/>
+
+				</>}
+
+				{ activeTab === 2 &&
+
+					<Item icon='user-tie'/>
+
+				}
+			</ItemContainer>
 		</Container>
 	)
 }
