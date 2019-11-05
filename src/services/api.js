@@ -9,8 +9,8 @@ const api = axios.create({
 })
 
 export async function getCards() {
-	const cards = api.get('cards/')
-	return cards.map(card => ({
+	const response = await api.get('cards/')
+	return response.data.map(card => ({
 		title: card.card_title,
 		details: card.card_description,
 		choices: [{
@@ -40,5 +40,5 @@ export async function login(username, password = '') {
 		username,
 		password
 	})
-	localStorage.setItem('user', JSON.stringify(response.body))
+	localStorage.setItem('user', JSON.stringify(response.data))
 }

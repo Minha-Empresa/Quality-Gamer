@@ -5,6 +5,7 @@ import { Container } from './styles'
 export default function Cards(props) {
 	const [cards, setCards] = useState(props.cards.map(card => ({ ...card, animatingOut: false })).reverse())
 	const sideEffect = props.sideEffect
+	console.log('render' + cards.length)
 
 	return (
 		cards.map((card, index) => (

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 
 import { Container } from './styles'
 import NavBar from './components/navigation'
@@ -11,7 +11,13 @@ export default function Home() {
 	const [employees, setEmployees] = useState(50)
 	const [code, setCode] = useState(50)
 	const [clients, setClients] = useState(50)
-	const cardList = [{
+	const [cardList, setCardList] = useState([])
+
+	useEffect(() => {
+		if (cardList.length === 0) loadCards()
+	}, [cardList, cardList.length])
+
+	/* [{
 		details: 'seu estagiário marcos derramou café em você',
 		choices: [
 			{
@@ -58,6 +64,7 @@ export default function Home() {
 		]
 	}
 	]
+	*/
 
 	return (
 		<Container>
@@ -95,5 +102,9 @@ export default function Home() {
 		if (clients + effect.clients < 0) setClients(0)
 		else if (clients + effect.clients > 100) setClients(100)
 		else setClients(clients + effect.clients)
+	}
+
+	async function loadCards() {
+		setCardList(await getCards())
 	}
 }
