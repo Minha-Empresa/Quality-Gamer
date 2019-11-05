@@ -10,7 +10,7 @@ export default function Home() {
 	const [employees, setEmployees] = useState(50)
 	const [code, setCode] = useState(50)
 	const [clients, setClients] = useState(50)
-	const content = {
+	const cardList = [{
 		details: 'seu estagiário marcos derramou café em você',
 		choices: [
 			{
@@ -32,15 +32,14 @@ export default function Home() {
 				}
 			}
 		]
-	}
+	}]
 
 	return (
 		<Container>
 			<div className="left">
 				<NavBar code={code} cash={cash} employees={employees} clients={clients} />
 				<Cards
-					details={content.details}
-					choices={content.choices}
+					cards={cardList}
 					sideEffect={sideEffect}
 				/>
 			</div>
@@ -51,8 +50,6 @@ export default function Home() {
 	)
 
 	function sideEffect(effect) {
-		console.log([cash, clients, employees, code])
-		console.log(effect)
 		if (cash + effect.cash < 0) setCash(0)
 		else if (cash + effect.cash > 100) setCash(100)
 		else setCash(cash + effect.cash)

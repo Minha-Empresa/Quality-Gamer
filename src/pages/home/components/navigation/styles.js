@@ -8,14 +8,15 @@ export const Container = styled.div`
     padding: 10px 0px;
 
     .icon {
-        font-size: 50px;
+		font-size: 50px;
+		margin: 5px 0px;
         color: #555;
     }
 `
 
 export const BarBorder = styled.div`
 	width: 10px;
-	height: 50px;
+	height: 60px;
 	margin-left: 15px;
 `
 

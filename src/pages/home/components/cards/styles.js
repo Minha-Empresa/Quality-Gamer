@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 90%;
+    width: 80%;
     min-height: 75%;
     background-color: #fff;
     margin: auto;
@@ -9,6 +9,15 @@ export const Container = styled.div`
     border-radius: 40px;
     overflow: hidden;
     flex-direction: column;
+	z-index: ${props => props.zIndex};
+
+	transform: translate(${props => {
+		if (props.animatingOut === 0) return '-500px'
+		if (props.animatingOut === 1) return '500px'
+		return '0px'
+	}}, ${props => props.zIndex * -100}%);
+
+	transition: all 1s;
 
     .image {
         background-color: #ccc;
