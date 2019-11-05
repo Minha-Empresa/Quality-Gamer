@@ -16,7 +16,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.2.0",
     "redux": "^4.0.4",
-    "reduxsauce": "^1.1.0",
+    "reduxsauce": "^1.1.1",
     "styled-components": "^4.4.0"
   },
   "scripts": {
