@@ -4,26 +4,53 @@ export const Container = styled.div`
 
 	display: flex;
 	flex-direction: column;
-	background-color: rgba(0, 0, 0, 0.25);
+	background-color: #f5f5f5;
+	border-width: 1px;
+	border-color: #b5b5b5;
 	border-radius: 20%;
+	border-style: solid;
 	margin: 6px 11px;
+	transition: all 0.4s;
 
 	&:hover {
-		background: rgba(50, 50, 50, 0.7);
+		background: #fff;
+		border-color: black;
+
+		.icon, h1, h6 {
+			color: black;
+		}
 	}
 
   	.icon {
-		color: white;
+		color: #666;
 		font-size: 50px;
 		padding: 10px;
 		margin: auto;
-		transition: all 0.4s;
   	}
 
 `
+
 export const PriceContainer = styled.div`
-	color: white;
+	color: #666;
 	margin: 0 10px;
 	padding: 5px;
-	font-size: 0.8em;
+	font-size: 0.6em;
+	display: flex;
+
+	h1 {
+		margin: auto;
+	}
+`
+
+export const NameContainer = styled.div`
+	color: #666;
+	margin: 0 10px;
+	padding: 5px;
+	display: flex;
+
+	h6 {
+		display: inline;
+		margin: 0 auto;
+		font-size: 1em;
+	}
 `

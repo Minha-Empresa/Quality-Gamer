@@ -46,15 +46,15 @@ export default function Store() {
 
 				{ activeTab === 1 && <>
 
-					<Item icon='server' price={100}/>
+					<Item icon='server' price={3490} name="Servidor"/>
 
-					<Item icon='keyboard' price={100}/>
+					<Item icon='keyboard' price={256} name="Teclado"/>
 
-					<Item icon='mouse' price={100}/>
+					<Item icon='mouse' price={134} name="Mouse"/>
 
-					<Item icon='hdd' price={100}/>
+					<Item icon='hdd' price={90} name="HDD"/>
 
-					<Item icon='headphones' price={100}/>
+					<Item icon='headphones' price={478} name="Fones"/>
 
 				</>}
 

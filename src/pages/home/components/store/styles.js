@@ -74,5 +74,8 @@ export const Tab = styled.button`
   }
 `
 export const ItemContainer = styled.div`
-
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
 `
