@@ -11,7 +11,6 @@ export default function Cards(props) {
 	const dispatch = useDispatch()
 
 	useEffect(() => {
-		console.log('effect')
 		if (cards.length !== 0) return
 		loadCards()
 	}, [cards.length])
@@ -48,7 +47,6 @@ export default function Cards(props) {
 			cards: response
 		})
 		setLoading(false)
-		console.log(cards)
 	}
 
 	function animateOut(card, choice) {
@@ -60,7 +58,8 @@ export default function Cards(props) {
 				type: 'DELETE_CARD',
 				card
 			})
-			if (cards.length === 1) loadCards()
+			cards.pop()
+			if (cards.length === 0) loadCards()
 		}, 1000)
 	}
 }

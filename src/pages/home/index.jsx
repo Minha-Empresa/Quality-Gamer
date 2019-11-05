@@ -11,55 +11,6 @@ export default function Home() {
 	const [code, setCode] = useState(50)
 	const [clients, setClients] = useState(50)
 
-	/* [{
-		details: 'seu estagiário marcos derramou café em você',
-		choices: [
-			{
-				text: 'xingar e mandar embora',
-				sideEffect: {
-					cash: -5,
-					employees: -5,
-					code: 5,
-					clients: 0
-				}
-			},
-			{
-				text: 'tudo bem',
-				sideEffect: {
-					cash: 0,
-					employees: 5,
-					code: -5,
-					clients: 0
-				}
-			}
-		]
-	},
-	{
-		details: '2',
-		choices: [
-			{
-				text: 'xingar e mandar embora',
-				sideEffect: {
-					cash: -5,
-					employees: -5,
-					code: 5,
-					clients: 0
-				}
-			},
-			{
-				text: 'tudo bem',
-				sideEffect: {
-					cash: 0,
-					employees: 5,
-					code: -5,
-					clients: 0
-				}
-			}
-		]
-	}
-	]
-	*/
-
 	return (
 		<Container>
 			<div className="left">

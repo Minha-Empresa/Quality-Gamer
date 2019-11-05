@@ -10,13 +10,13 @@ export const Container = styled.div`
     overflow: hidden;
     flex-direction: column;
 	z-index: ${props => props.zIndex};
-
 	transform: translate(${props => {
 		if (props.animatingOut) return '-5000px'
 		return '0px'
 	}}, ${props => props.zIndex * -100}%);
 
 	transition: all 1s;
+	opacity: 1;
 
     .image {
         background-color: #ccc;
