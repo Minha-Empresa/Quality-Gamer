@@ -18,13 +18,13 @@ module.exports = {
 	clearMocks: true,
 
 	// Indicates whether the coverage information should be collected while executing the test
-	// collectCoverage: false,
+	collectCoverage: false,
 
 	// An array of glob patterns indicating a set of files for which coverage information should be collected
 	// collectCoverageFrom: null,
 
 	// The directory where Jest should output its coverage files
-	coverageDirectory: 'coverage'
+	// coverageDirectory: 'coverage'
 
 	// An array of regexp pattern strings used to skip coverage collection
 	// coveragePathIgnorePatterns: [
@@ -64,19 +64,19 @@ module.exports = {
 	// maxWorkers: "50%",
 
 	// An array of directory names to be searched recursively up from the requiring module's location
-	// moduleDirectories: [
-	//   "node_modules"
-	// ],
+	moduleDirectories: [
+	  "node_modules"
+	],
 
 	// An array of file extensions your modules use
-	// moduleFileExtensions: [
-	//   "js",
-	//   "json",
-	//   "jsx",
-	//   "ts",
-	//   "tsx",
-	//   "node"
-	// ],
+	moduleFileExtensions: [
+	  "js",
+	  "json",
+	  "jsx",
+	  "ts",
+	  "tsx",
+	  "node"
+	],
 
 	// A map from regular expressions to module names that allow to stub out resources with a single module
 	// moduleNameMapper: {},
@@ -91,7 +91,7 @@ module.exports = {
 	// notifyMode: "failure-change",
 
 	// A preset that is used as a base for Jest's configuration
-	// preset: null,
+	//preset: null,
 
 	// Run tests from one or more projects
 	// projects: null,

@@ -22,7 +22,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "jest --env=jsdom",
+    "test": "jest",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -41,6 +41,9 @@
     ]
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.7.1",
+    "babel": "^6.23.0",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.18.2",
@@ -52,5 +55,10 @@
     "eslint-plugin-standard": "^4.0.1",
     "jest": "^24.9.0",
     "prettier": "^1.18.2"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
   }
 }
