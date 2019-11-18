@@ -10,9 +10,13 @@ import store from './store'
 
 library.add(fas, fab)
 
-ReactDOM.render(
+export const App = () => (
 	<Provider store={store}>
 		<Routes />
-	</Provider>,
+	</Provider>
+	)
+
+ReactDOM.render(
+	<App />,
 	document.getElementById('root')
 )
