@@ -16,6 +16,22 @@ export default function Form() {
 	const [password, setPassword] = useState('')
 	const history = useHistory()
 
+	const onEnterPress = (e) => {
+		if (e.key === 'Enter' && e.shiftKey === false) {
+			handleLogin()
+		}
+	}
+
+	async function handleLogin() {
+		try {
+			const response = await login(username, password)
+			history.push('/game')
+		} catch (err) {
+			// TODO: handle login error
+			console.error(err)
+		}
+	}
+
 	return (
 		<Container>
 			<Output />
@@ -26,8 +42,9 @@ export default function Form() {
 					type="text"
 					placeholder="Email"
 					value={username}
+					onKeyDown={onEnterPress}
 					onChange={event => {
-						setUsername(event.value)
+						setUsername(event.target.value)
 					}}
 				/>
 				<TextBox
@@ -36,22 +53,13 @@ export default function Form() {
 					type="password"
 					placeholder="Password"
 					value={password}
+					onKeyDown={onEnterPress}
 					onChange={event => {
-						setPassword(event.value)
+						setPassword(event.target.value)
 					}}
 				/>
 				<LoginButton type="reset" onClick={handleLogin}>Continue</LoginButton>
 			</FormBox>
 		</Container>
 	)
-
-	async function handleLogin() {
-		try {
-			await login(username, password)
-			history.push('/game')
-		} catch (err) {
-			// TODO: handle login error
-			console.log(err)
-		}
-	}
 }

@@ -37,9 +37,9 @@ export async function getCards() {
 }
 
 export async function login(username, password = '') {
-	const response = await api.post('get_user/', {
-		username,
-		password
-	})
+	const data = new FormData()
+	data.append('username', username)
+	data.append('password', password)
+	const response = await api.post('get_user/', data)
 	localStorage.setItem('user', JSON.stringify(response.data))
 }
